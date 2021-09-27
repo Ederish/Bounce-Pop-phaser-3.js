@@ -44,7 +44,7 @@ cursors = this.input.keyboard.createCursorKeys();
 //-------------------- Touch Button -----------//
 LeftButton=this.add.text(16, 480, ' ◄ ',{ fontSize:'85px', fill:'#8357eb',fontFamily: 'verdana, arial, sans-serif'}).setInteractive();
 RightButton=this.add.text(128, 480, ' ► ',{ fontSize:'85px', fill:'#8357eb',fontFamily: 'verdana, arial, sans-serif'}).setInteractive();
-jumpButton=this.add.text(650, 480, ' ⯄ ',{ fontSize:'85px', fill:'#8357eb',fontFamily: 'verdana, arial, sans-serif'}).setInteractive();
+jumpButton=this.add.text(650, 480, ' ◆ ',{ fontSize:'85px', fill:'#8357eb',fontFamily: 'verdana, arial, sans-serif'}).setInteractive();
 FullScreen=this.add.text(700, 1, ' ⎚ ',{ fontSize:'64px', fill:'#FFF',fontFamily: 'verdana, arial, sans-serif'}).setInteractive();
 //-------------------- Button click event -----------------//
 LeftButton.on('pointerdown', () => player.setVelocityX(-250));
