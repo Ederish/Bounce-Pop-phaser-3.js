@@ -29,7 +29,6 @@ var songs = [
   new Audio("assets/audio/level-11.mp3"),
   new Audio("assets/audio/level-12.mp3"),
 ]; 
-menuMusic = songs[0]; menuMusic.play();
 function preload(){
 //----------------------pleyer-------------------//
 this.load.image('ball', 'assets/Ball.png');
@@ -37,8 +36,12 @@ this.load.image('ball', 'assets/Ball.png');
 this.load.image('background', 'assets/img/lofi-1.jpg');
 //----------------------plataforms-------------------//
 this.load.image('plataform', 'assets/plataform.png');
+//---------------------- Menu Music -------------------//
+this.load.audio('menuMusic', 'assets/audio/menu-music.mp3');
 }
 function create (){
+//------------------ menu Music ------------//
+menuMusic = this.sound.add('menuMusic',{loop:true}); menuMusic.play();
 //-----------------backgraund-------------//
 this.add.image(400, 300, 'background').setDisplaySize(800, 600);
 //-------------------- Score -------------------------------------//
@@ -93,4 +96,5 @@ player.setVelocityX(250);
 if(cursors.space.isDown){
 player.setVelocityY(-350) .setGravityY(0)  
 setTimeout(function(){player.setGravityY(14000).setVelocityY(0)}, 400);
-}}
+}
+}
